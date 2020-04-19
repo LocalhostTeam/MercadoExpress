@@ -1,6 +1,6 @@
-<p align="center">
+<h2 align="center">
   How to - para executar o backend da aplicação
-</p>
+</h2>
 <p>
   Perdão ainda não temos o banco online, por isso baixe o Postgres 11 e instale, para funcionar sem maiores mudanças, siga as
   configurações encontradas no .env na raiz do backend.
