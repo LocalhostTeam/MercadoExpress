@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
 export class CategoryProduct {
@@ -10,10 +10,4 @@ export class CategoryProduct {
 
     @Column({ length: 255, nullable: true })
     obs: string;
-
-    @CreateDateColumn()
-    createdDate!: Date;
-
-    @UpdateDateColumn()
-    updatedDate!: Date;
 }
