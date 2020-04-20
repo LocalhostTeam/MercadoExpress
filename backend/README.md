@@ -1,3 +1,26 @@
+<h2 align="center">
+  How to - para executar o backend da aplicação
+</h2>
+<p>
+  Perdão ainda não temos o banco online, por isso baixe o Postgres 11 e instale, para funcionar sem maiores mudanças, siga as
+  configurações encontradas no .env na raiz do backend.
+</p>
+<p>
+  Link do Postgres:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+</p>
+<p>
+  Baixe o 11.7 para windows x86-64
+</p>
+<p>
+  Execute o pgAdmin instalado junto com o Postgres e crie o banco, o nome tem que ser o mesmo encontrado no .env 
+</p>
+<p>
+  De um git clone do repositório e execute o npm install na pasta backend
+</p>
+<p>
+  Agora execute o npm run typeorm migration:run
+</p>
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
