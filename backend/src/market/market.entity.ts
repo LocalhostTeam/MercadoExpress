@@ -21,6 +21,30 @@ export class Market {
     @Column({length: 255})
     password: string;
 
+    @Column({length: 11})
+    phone: string;
+
+    @Column("timetz")
+    openingTime: Date;
+
+    @Column("timetz")
+    closingTime: Date;
+
+    @Column({length: 20})
+    bank: string;
+
+    @Column({length: 4})
+    codBank: string;
+
+    @Column({length: 5})
+    agency: string;
+
+    @Column({length: 11})
+    account: string;
+
+    @Column()
+    verifyingDigit: number;
+
     @Column({length: 255})
     connectionStringDatabase: string;
 

@@ -1,10 +1,17 @@
-import { Entity, PrimaryColumn } from "typeorm";
+import { Entity, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, Column } from "typeorm";
+import { CategoryProduct } from "src/category-product/category-product.entity";
 
 @Entity()
-export class ProductMarket {
-    @PrimaryColumn()
-    product_id: number;
+export class Product {
+    @PrimaryGeneratedColumn()
+    id: number;
 
-    @PrimaryColumn()
-    market_id: number;
+    @ManyToOne(type => CategoryProduct)
+    categoryProduct: CategoryProduct;
+
+    @Column({length: 255})
+    fullName: string;
+
+    @Column({length: 50})
+    shortName: string;
 }
