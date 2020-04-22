@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, OneToMany, JoinColumn } from "typeorm";
 import { TypeOfDatabase } from "src/type-of-database/type-of-database.entity";
 import { ProductBrand } from "src/product-brand/product-brand.entity";
+import { Address } from "src/address/address.entity";
 
 @Entity()
 export class Market {
@@ -61,15 +62,24 @@ export class Market {
     @Column({length: 100})
     km_delivery: string;
 
-    @CreateDateColumn()
-    createdDate: Date;
-
-    @UpdateDateColumn()
-    updatedDate: Date;
-
     @OneToMany(() => ProductBrand, productBrand => [
         { name: "brandId", referencedColumnName: "brand" },
         { name: "productId", referencedColumnName: "product" }
     ])
     public productBrand!: ProductBrand;
+
+    @OneToMany(type => Address, address => address.customerOwnerId)
+    addresses: Address[];
+
+    @Column({type: 'real', default: null})
+    maximumWithdrawTime: number;
+
+    @Column({type: 'real', default: null})
+    maximumDeliveryTime: number;
+
+    @CreateDateColumn()
+    createdDate: Date;
+
+    @UpdateDateColumn()
+    updatedDate: Date;
 }
