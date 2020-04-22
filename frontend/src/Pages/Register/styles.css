@@ -1,0 +1,31 @@
+.register-container {
+    width: 100%;
+    max-width: 1120;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.register-container .form{
+    padding: 100px;
+    width: 100%;
+    background: #f0f0f5;
+    position: relative;
+}
+
+.register-container .form h1{
+    justify-content: right;
+}
+.register-container .form input{
+    position: relative;
+    border-radius: 2px;
+    justify-content: center;
+    padding: 8px;
+    align-items: right;
+    display: table-row-group;
+    box-shadow: 0 0 100px rg (0, 0, 0.1);
+}
