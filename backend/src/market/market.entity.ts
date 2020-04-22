@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, OneToMany, JoinColumn } from "typeorm";
 import { TypeOfDatabase } from "src/type-of-database/type-of-database.entity";
+import { ProductBrand } from "src/product-brand/product-brand.entity";
 
 @Entity()
 export class Market {
@@ -65,4 +66,10 @@ export class Market {
 
     @UpdateDateColumn()
     updatedDate: Date;
+
+    @OneToMany(() => ProductBrand, productBrand => [
+        { name: "brandId", referencedColumnName: "brand" },
+        { name: "productId", referencedColumnName: "product" }
+    ])
+    public productBrand!: ProductBrand;
 }

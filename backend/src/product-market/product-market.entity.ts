@@ -1,16 +1,20 @@
-import { Entity, PrimaryColumn, ManyToOne, Column } from "typeorm";
+import { Entity, PrimaryColumn, ManyToOne, Column, JoinColumn } from "typeorm";
 import { Market } from "src/market/market.entity";
 import { ProductBrand } from "src/product-brand/product-brand.entity";
 
 @Entity()
 export class ProductMarket {
-    @PrimaryColumn()
+    @PrimaryColumn("integer")
     @ManyToOne(() => ProductBrand)
-    product: ProductBrand;
+    @JoinColumn([
+        { name: "brandId", referencedColumnName: "brand" },
+        { name: "productId", referencedColumnName: "product" }
+    ])
+    public productBrand!: ProductBrand;
 
-    @PrimaryColumn()
-    @ManyToOne(() => Market)
-    market: Market;
+    @PrimaryColumn("integer")
+    @ManyToOne(() => Market, market => market.id)
+    public market!: Market;
 
     @PrimaryColumn()
     codProductInMarket: number;

@@ -1,5 +1,6 @@
-import { Entity, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, Column } from "typeorm";
+import { Entity, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, Column, OneToMany } from "typeorm";
 import { CategoryProduct } from "src/category-product/category-product.entity";
+import { ProductBrand } from "src/product-brand/product-brand.entity";
 
 @Entity()
 export class Product {
@@ -14,4 +15,7 @@ export class Product {
 
     @Column({length: 50})
     shortName: string;
+
+    @OneToMany(type => ProductBrand, productBrand => productBrand.product)
+    public productBrands!: ProductBrand[];
 }

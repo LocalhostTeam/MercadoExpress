@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import 'reflect-metadata';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CustomerModule } from './customer/customer.module';
@@ -7,14 +8,13 @@ import { AddressModule } from './address/address.module';
 import { ProductModule } from './product/product.module';
 import { CategoryProductModule } from './category-product/category-product.module';
 import { ProductMarketModule } from './product-market/product-market.module';
-import { MeansOfPaymentModule } from './means-of-payment/means-of-payment.module';
 import { MeanOfPaymentModule } from './mean-of-payment/mean-of-payment.module';
 import { TypeOfDatabaseModule } from './type-of-database/type-of-database.module';
 import { ProductBrandModule } from './product-brand/product-brand.module';
 import { BrandModule } from './brand/brand.module';
 
 @Module({
-  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeansOfPaymentModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule],
+  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule],
   controllers: [AppController],
   providers: [AppService],
 })
