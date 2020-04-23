@@ -25,7 +25,7 @@ Para iniciar o projeto na sua máquina de um jeito simples, você precisará de 
 
 ### Yarn
 
-Para usar todas as bibliotecas/tecnologias usadas no projeto, basta você escrever o seguinte código de comando no seu terminal:
+Para usar todas as bibliotecas/tecnologias usadas no projeto, basta você escrever o seguinte código de comando no seu terminal na raiz do projeto:
 ```
 yarn
 ```
