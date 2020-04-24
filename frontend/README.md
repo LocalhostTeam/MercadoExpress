@@ -21,11 +21,11 @@
 
 ## :rocket: Iniciando Projeto
 
-Para iniciar o projeto na sua máquina de um jeito simples, você precisará de dois gerenciadores de pacotes. [YARN](https://yarnpkg.com/getting-started/install) e [NPM]("https://nodejs.org/en/")
+Para iniciar o projeto na sua máquina de um jeito simples, você precisará de dois gerenciadores de pacotes. [YARN](https://yarnpkg.com/getting-started/install) e [NPM](https://nodejs.org/en/)
 
 ### Yarn
 
-Para usar todas as bibliotecas/tecnologias usadas no projeto, basta você escrever o seguinte código de comando no seu terminal:
+Para usar todas as bibliotecas/tecnologias usadas no projeto, basta você escrever o seguinte código de comando no seu terminal na raiz do projeto:
 ```
 yarn
 ```
