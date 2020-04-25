@@ -48,6 +48,18 @@ Aqui está listado todas as dependências e tecnologias utilizadas até o moment
 ```
 *(Podem ser adicionados mais dependências ao decorrer do desenvolvimento)*
 
+### Fonts Usadas
+
+Aqui está listado todas as fontes usadas no Frontend (SITE WEB)
+```
+1. Roboto
+2. Poppins
+3. Museo Slab
+```
+### Ilustrações Usadas
+
+Todas as ilustrações foram retiradas do site [Freepik](https://br.freepik.com/).
+
 ## :heart: Team LocalHost
 
 A gente vai criar o canal no youtube to nem ai não rsrs
