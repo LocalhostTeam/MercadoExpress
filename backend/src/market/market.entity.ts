@@ -30,13 +30,7 @@ export class Market {
     phone: string;
 
     @Column({default: false})
-    verifiedPhone: boolean
-
-    @Column("timetz")
-    openingTime: Date;
-
-    @Column("timetz")
-    closingTime: Date;
+    verifiedPhone: boolean;
 
     @Column({length: 20})
     bank: string;

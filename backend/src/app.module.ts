@@ -14,9 +14,11 @@ import { ProductBrandModule } from './product-brand/product-brand.module';
 import { BrandModule } from './brand/brand.module';
 import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
+import { TypeScheduleModule } from './type-schedule/type-schedule.module';
+import { ScheduleModule } from './schedule/schedule.module';
 
 @Module({
-  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule],
+  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule],
   controllers: [AppController],
   providers: [AppService],
 })
