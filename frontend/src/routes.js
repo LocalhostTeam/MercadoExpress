@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Logon from './pages/Logon';
-import Register from './pages/Register';
-import Profile from './pages/Profile';
-import HomeMarket from './pages/HomeMarket';
-import HomeMarketUser from './pages/HomeMarketUser';
-import Cart from './pages/Cart';
+import Home from './pages/Homepage/Home';
+import Logon from './pages/Homepage/Logon';
+import Register from './pages/Homepage/Register';
+import Profile from './pages/DashboardUser/Profile';
+import HomeMarket from './pages/Homepage/HomeMarket';
+import HomeMarketUser from './pages/DashboardUser/HomeMarketUser';
+import Cart from './pages/DashboardUser/Cart';
 
 function Routes() {
   return (
