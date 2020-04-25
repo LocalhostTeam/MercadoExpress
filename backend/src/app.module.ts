@@ -12,9 +12,11 @@ import { MeanOfPaymentModule } from './mean-of-payment/mean-of-payment.module';
 import { TypeOfDatabaseModule } from './type-of-database/type-of-database.module';
 import { ProductBrandModule } from './product-brand/product-brand.module';
 import { BrandModule } from './brand/brand.module';
+import { StateModule } from './state/state.module';
+import { CityModule } from './city/city.module';
 
 @Module({
-  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule],
+  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule],
   controllers: [AppController],
   providers: [AppService],
 })

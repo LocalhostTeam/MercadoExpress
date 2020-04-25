@@ -20,11 +20,17 @@ export class Market {
     @Column({length: 70, unique: true})
     email: string;
 
+    @Column({default: false})
+    verifiedEmail: boolean;
+
     @Column({length: 255})
     password: string;
 
     @Column({length: 11})
     phone: string;
+
+    @Column({default: false})
+    verifiedPhone: boolean
 
     @Column("timetz")
     openingTime: Date;
@@ -59,9 +65,6 @@ export class Market {
     @ManyToOne(type => TypeOfDatabase)
     typeOfDatabase: TypeOfDatabase;
 
-    @Column({length: 100})
-    km_delivery: string;
-
     @OneToMany(() => ProductBrand, productBrand => [
         { name: "brandId", referencedColumnName: "brand" },
         { name: "productId", referencedColumnName: "product" }
@@ -76,6 +79,18 @@ export class Market {
 
     @Column({type: 'real', default: null})
     maximumDeliveryTime: number;
+
+    @Column({length: 100})
+    km_delivery: string;
+
+    @Column({type: 'real', default: null})
+    deliveryPricePerKm: number;
+
+    @Column({type: 'real', default: null})
+    maximumDeliveryPrice: number;
+
+    @Column({type: 'real', default: null})
+    minimumDeliveryPrice: number;
 
     @CreateDateColumn()
     createdDate: Date;
