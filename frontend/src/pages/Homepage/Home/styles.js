@@ -87,15 +87,13 @@ export const Login = styled(Link)``;
 
 export const SectionAchar = styled.section`
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   padding: 0 20px 50px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  height: 100vh;
 
   h1 {
     font-size: 50px;
@@ -171,6 +169,111 @@ export const SectionAchar = styled.section`
 `;
 
 export const SectionComoFunciona = styled.section`
-  height: 300vh;
   background: linear-gradient(140deg, #6b2482, #0a1e89);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.container {
+    width: 1280px;
+  }
+`;
+
+export const FlexRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 250px 0;
+
+  div.exp-left,
+  div.exp-right {
+    color: #fff;
+
+    span {
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: Poppins, sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 33px;
+
+      max-width: 560px;
+      margin: 30px 0 30px 0;
+    }
+
+    div.topics {
+      font-family: Poppins, sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+
+      div.topics-single {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+
+        svg {
+          color: #6ac259;
+          font-size: 30px;
+
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  div.img-right {
+    position: relative;
+    top: 100px;
+
+    img {
+      width: 450px;
+    }
+  }
+
+  div.img-left {
+    position: relative;
+    top: 90px;
+
+    img {
+      width: 470px;
+    }
+  }
+`;
+
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 250px;
+
+  div.exp-center {
+    text-align: center;
+
+    span {
+      font-family: Poppins, sans-serif;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 60px;
+      color: #fff;
+
+      span {
+        font-size: 60px;
+      }
+    }
+  }
+
+  div.img-center {
+    img {
+      width: 850px;
+    }
+  }
 `;
