@@ -6,6 +6,7 @@ import MuseoSlab500 from '../assets/fonts/museo-slab/Museo_Slab_500.otf';
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   @font-face {
     font-family: MuseoSlab;
     src: url(${MuseoSlab500});
@@ -41,8 +42,34 @@ export default createGlobalStyle`
     padding-left: 40px;
   }
 
-  #root {
+  .container {
+    width: 1280px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+  }
 
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .space-top-250 {
+    margin-top: 250px;
+  }
+
+  .space-bottom-250 {
+    margin-bottom: 250px;
+  }
+
+  .space-bottom-150 {
+    margin-bottom: 150px;
   }
 
   .button{

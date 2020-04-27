@@ -2,10 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const SectionHome = styled.section`
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px 50px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,21 +19,28 @@ export const Header = styled.header`
 
   div.menu-desktop {
     font-family: Poppins, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 
     ul {
       li {
         display: inline-block;
         margin-left: 25px;
 
+        button {
+          font-size: 16px;
+          border: none;
+          background: none;
+          color: #6f6f6f;
+        }
+
         a {
           text-decoration: none;
           color: #6f6f6f;
         }
-
-        button.button {
-          width: 150px;
-        }
+      }
+      button.button {
+        width: 150px;
+        margin-left: 25px;
       }
     }
   }
@@ -86,9 +89,7 @@ export const HomeCall = styled.div`
 export const Login = styled(Link)``;
 
 export const SectionAchar = styled.section`
-  max-width: 1280px;
-  margin: 0 auto 100px auto;
-  padding: 0 20px 50px;
+  margin-bottom: 100px;
 
   display: flex;
   flex-direction: column;
@@ -174,9 +175,127 @@ export const SectionComoFunciona = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
 
-  div.container {
-    width: 1280px;
+export const SectionAplicativo = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  div.text-up {
+    margin: 150px 0 50px 0;
+
+    > span {
+      display: block;
+      margin-bottom: 25px;
+
+      font-size: 35px;
+      font-weight: 700;
+      color: #6b3c96;
+    }
+
+    p {
+      font-family: Poppins, sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 33px;
+      color: #4e4e4e;
+
+      max-width: 560px;
+    }
+  }
+`;
+
+export const Footer = styled.footer`
+  font-family: Montserrat, sans-serif;
+
+  padding: 50px;
+
+  background: #1b1543;
+  color: #fff;
+
+  div {
+    span {
+      display: block;
+
+      font-size: 15px;
+      font-weight: 700;
+
+      margin-bottom: 20px;
+    }
+
+    p {
+      width: 200px;
+    }
+
+    ul {
+      font-weight: 400;
+      list-style: none;
+
+      li {
+        margin-top: 15px;
+
+        button {
+          border: 0;
+          background: 0;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 15px;
+        }
+
+        a {
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: none;
+        }
+      }
+    }
+
+    form {
+      display: block;
+      input {
+        font-size: 14px;
+
+        width: 270px;
+        height: 45px;
+        padding-left: 15px;
+
+        border-radius: 4px;
+      }
+
+      button {
+        position: relative;
+        right: 30px;
+        vertical-align: bottom;
+
+        font-size: 19px;
+        font-weight: 700;
+
+        width: 120px;
+        height: 45px;
+
+        border: 0;
+        border-radius: 4px;
+
+        background: #3ecced;
+        color: #fff;
+      }
+    }
+  }
+
+  div.endereco {
+    span {
+      font-family: MuseoSlab;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  div.line-footer {
+    margin: 50px 0 30px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  div.footer-last {
   }
 `;
 
@@ -186,8 +305,6 @@ export const FlexRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
-  margin: 250px 0;
 
   div.exp-left,
   div.exp-right {
@@ -228,6 +345,33 @@ export const FlexRow = styled.div`
     }
   }
 
+  div.exp-app {
+    span {
+      font-size: 57px;
+      font-weight: 700;
+
+      strong {
+        color: #971bad;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        font-size: 40px;
+        color: #5d5d5d;
+      }
+
+      img {
+        width: 380px;
+        margin-top: 50px;
+      }
+    }
+  }
+
   div.img-right {
     position: relative;
     top: 100px;
@@ -252,8 +396,6 @@ export const FlexColumn = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 250px;
 
   div.exp-center {
     text-align: center;
