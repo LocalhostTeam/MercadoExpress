@@ -11,16 +11,8 @@ export class TypeOfDatabaseServices {
         private readonly repository: Repository<TypeOfDatabase>,
     ) { }
 
-    async getById(id:number): Promise<TypeOfDatabase> {
+    async get(id:number): Promise<TypeOfDatabase> {
         return await this.repository.findOne({ id: id });
-    }
-
-    async getByType(type:string): Promise<TypeOfDatabase> {
-        return await this.repository.findOne({type: type });
-    }
-
-    async postById(item: TypeOfDatabase) {
-        await this.repository.save(item);
     }
 
     async post(item: TypeOfDatabase) {

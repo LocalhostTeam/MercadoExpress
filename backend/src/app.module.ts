@@ -16,9 +16,20 @@ import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
 import { TypeScheduleModule } from './type-schedule/type-schedule.module';
 import { ScheduleModule } from './schedule/schedule.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule],
+  imports: [
+    TypeOrmModule.forRoot({
+    type: 'postgres',
+    host: 'localhost',
+    port: 5432,
+    username: 'postgres',
+    password: 'P02tGr32@*',
+    database: 'MercadoExpressDB',
+    autoLoadEntities: true,
+    synchronize: true,
+  }),CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule],
   controllers: [AppController],
   providers: [AppService],
 })

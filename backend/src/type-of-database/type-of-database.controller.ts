@@ -1,6 +1,6 @@
 
 import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
-import { TypeOfDatabase } from './interfaces/type-of-database.dto';
+import { TypeOfDatabaseDto } from './interfaces/type-of-database.dto';
 
 @Controller('type-of-database')
 export class TypeOfDatabaseController {
@@ -10,7 +10,7 @@ export class TypeOfDatabaseController {
     }
 
     @Post()
-    create(@Body() typeOfDatabaseDto: TypeOfDatabase) {
+    create(@Body() typeOfDatabaseDto: TypeOfDatabaseDto) {
         return typeOfDatabaseDto;
     }
 

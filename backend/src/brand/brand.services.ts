@@ -11,12 +11,8 @@ export class BrandServices {
         private readonly repository: Repository<Brand>,
     ) { }
 
-    async getById(id:number): Promise<Brand> {
+    async get(id:number): Promise<Brand> {
         return await this.repository.findOne({ id: id });
-    }
-
-    async postById(item: Brand) {
-        await this.repository.save(item);
     }
 
     async post(item: Brand) {

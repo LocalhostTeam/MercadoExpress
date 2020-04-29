@@ -11,16 +11,8 @@ export class MeanOfPaymentServices {
         private readonly repository: Repository<MeanOfPayment>,
     ) { }
 
-    async getById(id:number): Promise<MeanOfPayment> {
+    async get(id:number): Promise<MeanOfPayment> {
         return await this.repository.findOne({ id: id });
-    }
-
-    async getByType(type:string): Promise<MeanOfPayment> {
-        return await this.repository.findOne({type: type });
-    }
-
-    async postById(item: MeanOfPayment) {
-        await this.repository.save(item);
     }
 
     async post(item: MeanOfPayment) {

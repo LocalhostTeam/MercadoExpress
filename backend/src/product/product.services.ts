@@ -15,10 +15,6 @@ export class ProductServices {
         return await this.repository.findOne({ id: id });
     }
 
-    async postById(item: Product) {
-        await this.repository.save(item);
-    }
-
     async post(item: Product) {
         await this.repository.save(item);
     }
