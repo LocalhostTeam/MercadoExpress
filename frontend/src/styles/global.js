@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 import MuseoSlab500 from '../assets/fonts/museo-slab/Museo_Slab_500.otf';
-// import MuseoSlab300 from '../assets/fonts/museo-slab/Museo_Slab_300.otf';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
@@ -19,8 +18,9 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  html, body {
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body, button {

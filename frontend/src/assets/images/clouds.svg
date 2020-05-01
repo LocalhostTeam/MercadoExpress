@@ -1,0 +1,75 @@
+<svg id="Grupo_10681" data-name="Grupo 10681" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1384.567" height="812.495" viewBox="0 0 1384.567 812.495">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.012" y1="0.737" x2="0.811" y2="0.356" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6b2482"/>
+      <stop offset="0.058" stop-color="#6b2482"/>
+      <stop offset="1" stop-color="#0a1e89"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff5788"/>
+      <stop offset="0.95" stop-color="#f8ec32"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.64" y1="0.5" x2="1.64" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.05" stop-color="#f8ec32"/>
+      <stop offset="1" stop-color="#ff5788"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.058" stop-color="#f6931e"/>
+      <stop offset="1" stop-color="#ff5788"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-0.094" y1="0.197" x2="0.915" y2="1.145" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-6" x1="-0.191" y1="0.077" x2="0.779" y2="1.056" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6b2482"/>
+      <stop offset="0.05" stop-color="#6b2482"/>
+      <stop offset="0.637" stop-color="#3146b5" stop-opacity="0.361"/>
+      <stop offset="1" stop-color="#ff5788" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.42" y1="0.483" x2="0.792" y2="1.117" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#73288b"/>
+      <stop offset="0.05" stop-color="#6b2482"/>
+      <stop offset="1" stop-color="#0a1e89"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="0.315" y1="0.309" x2="0.803" y2="1.192" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7d3395"/>
+      <stop offset="0.05" stop-color="#6b2482"/>
+      <stop offset="1" stop-color="#0a1e89"/>
+    </linearGradient>
+  </defs>
+  <rect id="Retângulo_3" data-name="Retângulo 3" width="1384.567" height="811.495" fill="url(#linear-gradient)"/>
+  <g id="Grupo_10680" data-name="Grupo 10680">
+    <path id="Caminho_1" data-name="Caminho 1" d="M91.964,328.121c-14.1-5.122-15.056-28.046-10.6-37.954,7.071-15.711,36.675-32.686,55.448-18.776a34.87,34.87,0,0,1-3.669-39.644c8.741-15.334,33.012-29.772,53.792-21.506a36.333,36.333,0,0,1,20.389,20.652c3.331,8.7,3.222,18.081,1.566,27.1.6-3.248,19.042-5.566,22.464-5.531,18.693.2,32.514,15.926,26.848,30.668,13.5-5.564,31.43-.76,39.71,9.64s7.087,24.907-1.489,35.141l-114.654.407-70.222.249c-5.14.018-12.937,1.282-17.9.063A16.5,16.5,0,0,1,91.964,328.121Z" transform="translate(-40.004 114.916)" opacity="0.6" fill="url(#linear-gradient-2)" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Caminho_2" data-name="Caminho 2" d="M473.086,252.812c14.1-5.12,15.058-28.046,10.6-37.952-7.071-15.711-36.677-32.688-55.448-18.776A34.867,34.867,0,0,0,431.9,156.44c-8.739-15.334-33.01-29.772-53.79-21.506a36.336,36.336,0,0,0-20.389,20.65c-3.331,8.7-3.224,18.083-1.566,27.1-.6-3.248-19.042-5.566-22.464-5.531-18.693.2-32.516,15.926-26.848,30.666-13.5-5.564-31.43-.76-39.71,9.64s-7.086,24.907,1.489,35.143l114.655.4,70.222.249c5.14.018,12.935,1.281,17.9.063A15.97,15.97,0,0,0,473.086,252.812Z" transform="translate(210.24 22.806)" opacity="0.5" fill="url(#linear-gradient-3)" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Caminho_3" data-name="Caminho 3" d="M694.482,548.579c-6.615,26.162-16.805,51.89-32.461,73.689H182.171A86.171,86.171,0,0,1,166.1,594.842C116.893,454.868,269.8,421.3,304.652,430.167c14.037-35.6,55.326-58.11,92.86-50.627-7.641-43.795,23.477-85.5,59.554-111.521,35.285-25.471,78.408-42.156,121.828-39.115s86.423,28.295,103.818,68.18C716.436,374.387,715.155,466.814,694.482,548.579Z" transform="translate(87.683 176.303)" opacity="0.31" fill="url(#linear-gradient-4)" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Caminho_4" data-name="Caminho 4" d="M272.232,488.1c-.592,16.448-3.238,49.566-7.839,65.521H59.616V315.215c19.548-5.311,41.465-4.265,59.749,3.89,28.65,12.795,46.4,42.156,42.334,70.076,28.1-13.545,65.653-2.448,85.793,19.41q1.629,1.777,3.139,3.613C268.224,433.627,273.2,461.587,272.232,488.1Z" transform="translate(-58.893 257.571)" opacity="0.31" fill="url(#linear-gradient-5)" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="Caminho_5" data-name="Caminho 5" d="M271.866,497.245a202.289,202.289,0,0,1-7.839,48.771H59.25V324.356c19.548-5.311,41.465-4.265,59.749,3.89,28.65,12.795,46.4,42.156,42.334,70.076,28.1-13.545,65.653-2.448,85.793,19.409q1.629,1.777,3.14,3.613C267.858,442.768,272.834,470.728,271.866,497.245Z" transform="translate(-59.25 266.479)" fill="url(#linear-gradient-6)" style="mix-blend-mode: lighten;isolation: isolate"/>
+    <path id="Caminho_6" data-name="Caminho 6" d="M736.612,484.15c-.118,48.731-11.432,98.785-40.359,137.96H130.81c.513-22.569,3.771-45.078,11.354-66.285,7.918-22.134,20.871-42.847,38.365-58.387a111.608,111.608,0,0,1,16.527-12.262c22.115-13.447,48.238-18.738,74.025-21.068,28-2.547,57.439-1.58,82.416,11.334a52.333,52.333,0,0,1,79.238-41.919c-9.478-45.572,4.936-94.876,35.4-130.081,30.447-35.225,75.822-56.353,122.243-59.927,16.586-1.264,33.508-.395,49.343,4.7,40.932,13.17,68.3,52.364,83.285,92.684C740.088,386.9,736.751,435.063,736.612,484.15Z" transform="translate(10.487 190.386)" fill="url(#linear-gradient-7)" style="mix-blend-mode: lighten;isolation: isolate"/>
+    <path id="Caminho_7" data-name="Caminho 7" d="M605.76,555.346H227.6a170.708,170.708,0,0,1,8-29.6c11.057-29.953,30.526-56.965,56.274-76,22.056-16.29,49.955-28.038,77.4-30.309,29.736-2.488,57.7-1.145,80.4,17.435-4.146-20.3,1.4-47.882,9.359-67.588,9.576-23.694,28.137-44.328,52.542-53.055a80.173,80.173,0,0,1,49.817-1.441,81.552,81.552,0,0,1,22.253,10.485,122.3,122.3,0,0,1,45.947,57.952c9.695,25.689,10.386,53.746,10.88,81.192C641.143,500.948,640.334,537.082,605.76,555.346Z" transform="translate(179.349 257.149)" fill="url(#linear-gradient-8)" style="mix-blend-mode: lighten;isolation: isolate"/>
+  </g>
+  <g id="Grupo_7" data-name="Grupo 7" transform="translate(26.614 35.152)">
+    <path id="Caminho_31" data-name="Caminho 31" d="M194.532,86.482a6.025,6.025,0,1,1-6.024-6.026A6.026,6.026,0,0,1,194.532,86.482Z" transform="translate(34.227 -80.456)" fill="#fff"/>
+    <path id="Caminho_32" data-name="Caminho 32" d="M154.887,307.683a6.026,6.026,0,1,1-6.026-6.026A6.028,6.028,0,0,1,154.887,307.683Z" transform="translate(-4.409 135.109)" fill="#fff" opacity="0.34"/>
+    <path id="Caminho_33" data-name="Caminho 33" d="M215.7,261.4a6.025,6.025,0,1,1-6.024-6.026A6.024,6.024,0,0,1,215.7,261.4Z" transform="translate(54.86 90.009)" fill="#fff" opacity="0.34"/>
+    <path id="Caminho_34" data-name="Caminho 34" d="M79.061,157.211a6.025,6.025,0,1,1,5.71-6.324A6.025,6.025,0,0,1,79.061,157.211Z" transform="translate(-72.729 -17.393)" fill="#fff" opacity="0.34"/>
+    <path id="Caminho_35" data-name="Caminho 35" d="M166.18,98.741a6.026,6.026,0,1,1-6.026-6.024A6.026,6.026,0,0,1,166.18,98.741Z" transform="translate(6.596 -68.507)" fill="#fff" opacity="0.34"/>
+    <path id="Caminho_36" data-name="Caminho 36" d="M261.756,129.888a6.026,6.026,0,1,1-6.026-6.026A6.028,6.028,0,0,1,261.756,129.888Z" transform="translate(99.737 -38.156)" fill="#fff" opacity="0.34"/>
+    <circle id="Elipse_1" data-name="Elipse 1" cx="6.026" cy="6.026" r="6.026" transform="translate(173.762 496.427)" fill="#fff"/>
+    <circle id="Elipse_2" data-name="Elipse 2" cx="6.026" cy="6.026" r="6.026" transform="translate(34.677 279.532)" fill="#fff" opacity="0.34"/>
+    <circle id="Elipse_3" data-name="Elipse 3" cx="6.026" cy="6.026" r="6.026" transform="translate(15.686 245.433)" fill="#fff"/>
+    <path id="Caminho_37" data-name="Caminho 37" d="M357.311,158.265a6.025,6.025,0,1,1-6.024-6.026A6.024,6.024,0,0,1,357.311,158.265Z" transform="translate(192.858 -10.502)" fill="#fff" opacity="0.34"/>
+    <path id="Caminho_38" data-name="Caminho 38" d="M365.375,127.563a6.025,6.025,0,1,1-6.026-6.024A6.025,6.025,0,0,1,365.375,127.563Z" transform="translate(200.718 -40.42)" fill="#fff"/>
+    <path id="Caminho_39" data-name="Caminho 39" d="M282.354,260.381a6.026,6.026,0,1,1-6.026-6.024A6.025,6.025,0,0,1,282.354,260.381Z" transform="translate(119.81 89.014)" fill="#fff"/>
+  </g>
+  <g id="Grupo_8" data-name="Grupo 8" transform="translate(29.793 48.102)">
+    <line id="Linha_1" data-name="Linha 1" x2="17.868" transform="translate(484.097 25.818)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_2" data-name="Linha 2" x2="17.869" transform="translate(427.164)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_3" data-name="Linha 3" x2="17.868" transform="translate(95.113 471.724)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_4" data-name="Linha 4" x2="17.868" transform="translate(0 86.481)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_5" data-name="Linha 5" x2="17.868" transform="translate(606.57 193.97)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_6" data-name="Linha 6" x2="17.869" transform="translate(275.059 390.518)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_7" data-name="Linha 7" x2="17.869" transform="translate(350.887 124.65)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_8" data-name="Linha 8" x2="17.868" transform="translate(530.72 229.148)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_9" data-name="Linha 9" x2="17.868" transform="translate(89.695 27.632)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_10" data-name="Linha 10" x2="17.869" transform="translate(223.348 431.21)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <line id="Linha_11" data-name="Linha 11" x2="17.869" transform="translate(45.463 320.526)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="4" opacity="0.31" style="mix-blend-mode: multiply;isolation: isolate"/>
+  </g>
+</svg>

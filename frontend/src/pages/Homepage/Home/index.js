@@ -16,12 +16,12 @@ import {
   Login,
 } from './styles';
 
-import HomeImg from '../../../assets/images/home.svg';
-import MobileAndWeb from '../../../assets/images/mobileandweb.svg';
-import TimeImg from '../../../assets/images/time.svg';
-import GlobalImg from '../../../assets/images/global.svg';
-import AppImg from '../../../assets/images/app.svg';
-import StoresImg from '../../../assets/images/stores.svg';
+import HomeImg from '../../../assets/images/Home/home.svg';
+import MobileAndWeb from '../../../assets/images/Home/mobileandweb.svg';
+import TimeImg from '../../../assets/images/Home/time.svg';
+import GlobalImg from '../../../assets/images/Home/global.svg';
+import AppImg from '../../../assets/images/Home/app.svg';
+import StoresImg from '../../../assets/images/Home/stores.svg';
 import LifeIcon from '../../../assets/Icons/icon1.svg';
 import SecurityIcon from '../../../assets/Icons/icon2.svg';
 import SupportIcon from '../../../assets/Icons/icon3.svg';
