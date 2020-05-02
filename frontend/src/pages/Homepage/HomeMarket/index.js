@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { FaCheckCircle, FaAngleDown } from 'react-icons/fa';
+import {
+  FaCheckCircle,
+  FaAngleDown,
+  FaDollarSign,
+  FaAngleDoubleUp,
+} from 'react-icons/fa';
 
 import {
   SectionHome,
@@ -90,6 +95,8 @@ function HomeMarket() {
                   <strong>MercadoExpress</strong>.
                 </span>
                 <div>
+                  <FaDollarSign />
+                  <FaAngleDoubleUp />
                   <p>Cadastre o seu mercado e venda exponencialmente.</p>
                 </div>
               </div>
@@ -103,18 +110,24 @@ function HomeMarket() {
               </p>
               <form>
                 <span>Nome do mercado</span>
-                <input type="text" placeholder="Qual o nome do mercado?" />
+                <input
+                  type="text"
+                  placeholder="Qual o nome do mercado?"
+                  required
+                />
 
                 <span>E-mail</span>
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Qual o e-mail do dono ou gerente do mercado?"
+                  required
                 />
 
                 <span>Cidade</span>
                 <input
                   type="text"
                   placeholder="Qual cidade está localizado o mercado?"
+                  required
                 />
 
                 <p>
@@ -326,9 +339,6 @@ function HomeMarket() {
                   </button>
                 </li>
                 <li>
-                  <Link to="/mercado">Parceiros</Link>
-                </li>
-                <li>
                   <Link to="/login">Entrar</Link>
                 </li>
               </ul>
@@ -337,7 +347,7 @@ function HomeMarket() {
 
           <div className="column">
             <div className="parceiros">
-              <span>Parceiros</span>
+              <span>Usuários</span>
               <ul>
                 <li>
                   <a href="/">Home</a>
@@ -352,7 +362,7 @@ function HomeMarket() {
                   <a href="/">Aplicativo</a>
                 </li>
                 <li>
-                  <a href="/">Entrar</a>
+                  <a href="/login">Entrar</a>
                 </li>
               </ul>
             </div>
@@ -366,7 +376,7 @@ function HomeMarket() {
                   <Link to="/login">Minha conta</Link>
                 </li>
                 <li>
-                  <Link to="/login">Criar conta</Link>
+                  <Link to="/cadastro">Criar conta</Link>
                 </li>
               </ul>
             </div>

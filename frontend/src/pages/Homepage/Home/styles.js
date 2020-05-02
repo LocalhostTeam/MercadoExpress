@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 import { Link } from 'react-router-dom';
 
 export const SectionHome = styled.section`
@@ -31,11 +32,22 @@ export const Header = styled.header`
           border: none;
           background: none;
           color: #6f6f6f;
+
+          transition: 0.3s ease-out;
+
+          &:hover {
+            color: ${darken('0.35', '#6f6f6f')};
+          }
         }
 
         a {
           text-decoration: none;
           color: #6f6f6f;
+          transition: 0.3s ease-out;
+
+          &:hover {
+            color: ${darken('0.35', '#6f6f6f')};
+          }
         }
       }
       button.button {
@@ -242,11 +254,23 @@ export const Footer = styled.footer`
           background: 0;
           color: rgba(255, 255, 255, 0.8);
           font-size: 15px;
+
+          transition: 0.3s;
+
+          &:hover {
+            color: ${darken('-0.6', '#fff')};
+          }
         }
 
         a {
           color: rgba(255, 255, 255, 0.8);
           text-decoration: none;
+
+          transition: 0.3s;
+
+          &:hover {
+            color: ${darken('-0.6', '#fff')};
+          }
         }
       }
     }

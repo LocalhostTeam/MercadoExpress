@@ -122,7 +122,7 @@ export const Form = styled.form`
   input {
     display: block;
 
-    width: 330px;
+    width: 320px;
     height: 60px;
     padding-left: 10px;
     margin-bottom: 20px;
@@ -131,6 +131,14 @@ export const Form = styled.form`
     border-bottom: 2px solid #d9d9d9;
     border-radius: 0;
     box-shadow: none;
+
+    transition: 0.3s;
+  }
+
+  input[type='text']:focus,
+  input[type='password']:focus {
+    width: 330px;
+    border-color: #b655bb;
   }
 
   > a {

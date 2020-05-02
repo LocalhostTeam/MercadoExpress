@@ -289,19 +289,16 @@ function Home() {
               <span>Parceiros</span>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/mercado">Home</a>
                 </li>
                 <li>
-                  <a href="/">Como Funciona</a>
+                  <a href="/mercado">Como Funciona</a>
                 </li>
                 <li>
-                  <a href="/">Parceiros</a>
+                  <a href="/mercado">Ferramentas</a>
                 </li>
                 <li>
-                  <a href="/">Aplicativo</a>
-                </li>
-                <li>
-                  <a href="/">Entrar</a>
+                  <a href="/login">Entrar</a>
                 </li>
               </ul>
             </div>
@@ -315,7 +312,7 @@ function Home() {
                   <Link to="/login">Minha conta</Link>
                 </li>
                 <li>
-                  <Link to="/login">Criar conta</Link>
+                  <Link to="/cadastro">Criar conta</Link>
                 </li>
               </ul>
             </div>
@@ -325,7 +322,7 @@ function Home() {
             <div className="novidades">
               <span>Receba nossas novidads :)</span>
               <form>
-                <input type="text" placeholder="Digite o seu melho e-mail" />
+                <input type="email" placeholder="Digite o seu melho e-mail" />
                 <button type="button">Enviar</button>
               </form>
             </div>

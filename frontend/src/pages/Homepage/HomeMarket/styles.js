@@ -1,5 +1,5 @@
-// import styled from 'styled-components';
 import styled from 'styled-components';
+import { darken } from 'polished';
 import { Link } from 'react-router-dom';
 
 import bgImg from '../../../assets/images/HomeMarket/bghome.svg';
@@ -48,6 +48,12 @@ export const Header = styled.header`
           border: none;
           background: none;
           color: #fff;
+
+          transition: 0.3s ease-out;
+
+          &:hover {
+            border-bottom: 4px solid #fff;
+          }
         }
 
         a {
@@ -61,6 +67,12 @@ export const Header = styled.header`
 
         background: none;
         border: 2px solid #fff;
+        transition: 0.3s;
+
+        &:hover {
+          background: #fff;
+          color: #b655bb;
+        }
       }
     }
   }
@@ -85,10 +97,27 @@ export const HomeCall = styled.div`
       }
     }
 
-    p {
-      font-family: Poppins, sans-serif;
-      font-size: 18px;
-      margin-top: 60px;
+    div {
+      display: flex;
+      margin-top: 90px;
+
+      svg {
+        font-size: 40px;
+      }
+
+      svg:nth-of-type(2) {
+        font-size: 20px;
+        vertical-align: top;
+
+        margin-right: 10px;
+      }
+
+      p {
+        font-family: Poppins, sans-serif;
+        font-size: 18px;
+        line-height: 20px;
+        width: 300px;
+      }
     }
   }
 `;
@@ -124,6 +153,7 @@ export const Form = styled.div`
     }
 
     input {
+      display: block;
       font-size: 14px;
 
       height: 50px;
@@ -136,6 +166,13 @@ export const Form = styled.div`
       padding-left: 15px;
       margin-top: 15px;
       margin-bottom: 30px;
+
+      transition: 0.3s;
+    }
+
+    input[type='text']:focus,
+    input[type='email']:focus {
+      border: 2px solid #b655bb;
     }
 
     > p {
