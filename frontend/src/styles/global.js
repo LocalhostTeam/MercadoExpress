@@ -16,7 +16,7 @@ export default createGlobalStyle`
   @font-face {
     font-family: ArialRounded;
     src: url(${ArialRounded});
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
   }
   @font-face {
@@ -62,16 +62,18 @@ export default createGlobalStyle`
     padding-left: 40px;
   }
 
+  .clear {
+    clear: both;
+  }
+
   .container {
     width: 1280px;
-    max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px 50px;
   }
 
   .container-app {
     width: 1440px;
-    max-width: 1440px;
     margin-right: auto;
   }
 
@@ -131,5 +133,15 @@ export default createGlobalStyle`
   button {
     font-family: Roboto, sans-serif;
     cursor: pointer;
+  }
+
+  @media (max-width: 1240px) {
+    .container {
+      width: 100%;
+    }
+
+    .container-app {
+      width: 100%;
+    }
   }
 `;
