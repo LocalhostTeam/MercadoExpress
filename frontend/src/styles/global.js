@@ -7,6 +7,7 @@ import MuseoSlab500 from '../assets/fonts/museo-slab/Museo_Slab_500.otf';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
   @font-face {
     font-family: ArialRoundedLight;
     src: url(${ArialRoundedLight});
