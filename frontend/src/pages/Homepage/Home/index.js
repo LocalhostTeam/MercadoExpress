@@ -146,6 +146,7 @@ function Home() {
               </Login>
               <a
                 href="https://www.youtube.com/watch?v=XWF4SBbRMdc"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <button className="button2" type="button">
@@ -274,7 +275,11 @@ function Home() {
               Economize seu tempo agora baixando nosso <strong>APP</strong>.
             </span>
             <div className="stores">
-              <a href="https://play.google.com/store" target="_blank">
+              <a
+                href="https://play.google.com/store"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <img src={StoresImg} alt="Google Play" />
               </a>
             </div>

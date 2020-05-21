@@ -6,7 +6,7 @@ import ArialRoundedBold from '../assets/fonts/arial-rounded/arial-rounded-mt-bol
 import MuseoSlab500 from '../assets/fonts/museo-slab/Museo_Slab_500.otf';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
   @font-face {
     font-family: ArialRoundedLight;
@@ -42,6 +42,8 @@ export default createGlobalStyle`
   html, body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+
+    height: 100%;
   }
 
   body {
@@ -129,6 +131,11 @@ export default createGlobalStyle`
     text-decoration: none;
     text-align: center;
     font-size: 15px;
+}
+
+.button3 {
+  background: none;
+  border: none;
 }
 
   button {

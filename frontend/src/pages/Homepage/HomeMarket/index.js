@@ -24,9 +24,9 @@ import {
 
 import formImg from '../../../assets/images/HomeMarket/form.svg';
 import fastImg from '../../../assets/images/HomeMarket/fast.svg';
-import mobileIcon from '../../../assets/Icons/mobile.svg';
-import webIcon from '../../../assets/Icons/web.svg';
-import dashboardIcon from '../../../assets/Icons/budget.svg';
+import mobileIcon from '../../../assets/icons/mobile.svg';
+import webIcon from '../../../assets/icons/web.svg';
+import dashboardIcon from '../../../assets/icons/budget.svg';
 
 function HomeMarket() {
   const home = React.createRef();
