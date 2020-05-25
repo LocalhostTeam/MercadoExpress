@@ -32,19 +32,19 @@ export class Market {
     @Column({default: false})
     verifiedPhone: boolean;
 
-    @Column({length: 20})
+    @Column({length: 20, nullable: false})
     bank: string;
 
-    @Column({length: 4})
+    @Column({length: 4, nullable: false})
     codBank: string;
 
-    @Column({length: 5})
+    @Column({length: 5, nullable: false})
     agency: string;
 
-    @Column({length: 11})
+    @Column({length: 11, nullable: false})
     account: string;
 
-    @Column()
+    @Column({nullable: false})
     verifyingDigit: number;
 
     @Column({length: 255})
@@ -56,8 +56,42 @@ export class Market {
     @Column({length: 20})
     passwordDatabase: string;
 
+    @Column({type: 'real', default: 0.00})
+    maximumWithdrawTime: number;
+
+    @Column({default: 0})
+    maximumWithdraw: number;
+
+    @Column({type: 'timetz', default: '00:00'})
+    maximumDeliveryTime: number;
+
+    @Column({default: 0})
+    maximumDelivery: number;
+
+    @Column({length: 100})
+    km_delivery: string;
+
+    @Column({type: 'real', default: 0.00})
+    deliveryPricePerKm: number;
+
+    @Column({type: 'timetz', default: '00:00'})
+    minimumDeliveryPrice: number;
+
+    @Column({type: 'real', default: 0.00})
+    maximumDeliveryPrice: number;
+
+    @Column()
+    typeOfDatabaseId: number;
+
     @ManyToOne(type => TypeOfDatabase)
+    @JoinColumn({ name: 'typeOfDatabaseId' })
     typeOfDatabase: TypeOfDatabase;
+
+    @Column()
+    brandId: number;
+
+    @Column()
+    productId: number;
 
     @OneToMany(() => ProductBrand, productBrand => [
         { name: "brandId", referencedColumnName: "brand" },
@@ -67,24 +101,6 @@ export class Market {
 
     @OneToMany(type => Address, address => address.customerOwnerId)
     addresses: Address[];
-
-    @Column({type: 'real', default: null})
-    maximumWithdrawTime: number;
-
-    @Column({type: 'real', default: null})
-    maximumDeliveryTime: number;
-
-    @Column({length: 100})
-    km_delivery: string;
-
-    @Column({type: 'real', default: null})
-    deliveryPricePerKm: number;
-
-    @Column({type: 'real', default: null})
-    maximumDeliveryPrice: number;
-
-    @Column({type: 'real', default: null})
-    minimumDeliveryPrice: number;
 
     @CreateDateColumn()
     createdDate: Date;

@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from "typeorm";
 import { State } from "src/state/state.entity";
 
 @Entity()
@@ -16,5 +16,6 @@ export class City {
     // // então por enquando use dessa forma.
 
     @ManyToOne(type => State, state => state.acronym)
+    // @JoinColumn({ name: acronym })
     state: State;
 }

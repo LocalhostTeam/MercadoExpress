@@ -1,4 +1,4 @@
-import { Entity, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, Column, OneToMany, JoinColumn } from "typeorm";
 import { CategoryProduct } from "src/category-product/category-product.entity";
 import { ProductBrand } from "src/product-brand/product-brand.entity";
 
@@ -7,15 +7,19 @@ export class Product {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @ManyToOne(type => CategoryProduct)
-    categoryProduct: CategoryProduct;
-
     @Column({length: 255})
     fullName: string;
 
     @Column({length: 50})
     shortName: string;
 
-    @OneToMany(type => ProductBrand, productBrand => productBrand.product)
+    @Column()
+    categoryProductId: number;
+
+    @ManyToOne(type => CategoryProduct)
+    @JoinColumn({ name: 'categoryProductId' })
+    categoryProduct: CategoryProduct;
+
+    @OneToMany(type => ProductBrand, productBrand => productBrand.productId)
     public productBrands!: ProductBrand[];
 }
