@@ -99,7 +99,7 @@ export class Market {
     ])
     public productBrand!: ProductBrand;
 
-    @OneToMany(type => Address, address => address.customerOwnerId)
+    @OneToMany(type => Address, address => address.marketId)
     addresses: Address[];
 
     @CreateDateColumn()

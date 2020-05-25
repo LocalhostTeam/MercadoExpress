@@ -28,5 +28,11 @@ export class ProductMarket {
     codProductInMarket: number;
 
     @Column("real")
+    price: number;
+
+    @Column("real")
     discount: number;
+
+    @Column()
+    quantity: number;
 }

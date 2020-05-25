@@ -7,20 +7,20 @@ import { Market } from 'src/market/market.entity';
 export class ProductBrand {
     @PrimaryColumn({ type: 'integer'})
     marketId!: number;
-    
-    @PrimaryColumn({ type: 'integer'})
-    brandId!: number;
-
-    @Column({length: 255})
-    public image!: string;
 
     @OneToMany(type => Market, market => market.id)
     @JoinColumn({ name: 'marketId' })
     public markets!: Market[];
     
+    @PrimaryColumn({ type: 'integer'})
+    brandId!: number;
+    
     @ManyToOne(type => Brand, brand => brand.productBrands)
     @JoinColumn({ name: 'brandId' })
     public brand!: Brand;
+
+    @Column({length: 255})
+    public image!: string;
 
     @Column()
     productId!: number;

@@ -39,6 +39,6 @@ export class Customer {
     @Column({default: true})
     notification: boolean;
 
-    @OneToMany(type => Address, address => address.customerOwnerId)
+    @OneToMany(type => Address, address => address.customerId)
     addresses: Address[];
 }
