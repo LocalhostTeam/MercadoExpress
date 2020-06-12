@@ -35,7 +35,8 @@ export const Header = styled.header`
   margin-top: 30px;
 
   div.menu-desktop {
-    font-family: Poppins, sans-serif;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
     font-size: 16px;
 
     ul {
@@ -44,6 +45,7 @@ export const Header = styled.header`
         margin-left: 25px;
 
         button {
+          font-weight: 500;
           font-size: 16px;
           border: none;
           background: none;
@@ -71,7 +73,7 @@ export const Header = styled.header`
 
         &:hover {
           background: #fff;
-          color: #b655bb;
+          color: #2a9f8d;
         }
       }
     }
@@ -79,6 +81,7 @@ export const Header = styled.header`
 `;
 
 export const HomeCall = styled.div`
+  font-family: Roboto, sans-serif;
   position: relative;
   top: 200px;
 
@@ -93,7 +96,7 @@ export const HomeCall = styled.div`
       line-height: 65px;
 
       strong {
-        color: #b655bb;
+        color: #2a9f8d;
       }
     }
 
@@ -123,6 +126,7 @@ export const HomeCall = styled.div`
 `;
 
 export const Form = styled.div`
+  font-family: Roboto, sans-serif;
   background: #fff;
   width: 85%;
   padding: 24px 24px;
@@ -172,7 +176,7 @@ export const Form = styled.div`
 
     input[type='text']:focus,
     input[type='email']:focus {
-      border: 2px solid #b655bb;
+      border: 2px solid #16a08b;
     }
 
     > p {
@@ -236,6 +240,7 @@ export const SectionComoFunciona = styled.section`
 `;
 
 export const SectionFerramentas = styled.section`
+  font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,7 +258,7 @@ export const SectionFerramentas = styled.section`
 
       font-size: 35px;
       font-weight: 500;
-      color: #6b3c96;
+      color: #212121;
     }
 
     p {
@@ -304,10 +309,12 @@ export const SectionFerramentas = styled.section`
 `;
 
 export const SectionAtention = styled.section`
+  font-family: Roboto, sans-serif;
+
   width: 100%;
   height: 400px;
 
-  background: linear-gradient(to right, #6b2482, #0a1e89);
+  background: linear-gradient(to right, #33816e, #0a1e89);
 
   color: #fff;
   text-align: center;
@@ -351,7 +358,7 @@ export const Footer = styled.footer`
 
   padding: 50px;
 
-  background: #1b1543;
+  background: #263238;
   color: #fff;
 
   div {
@@ -446,7 +453,7 @@ export const FlexRow = styled.div`
 
   div.exp-left,
   div.exp-right {
-    color: #3c3c3c;
+    color: #212121;
 
     span {
       font-size: 35px;
