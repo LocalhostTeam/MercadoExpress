@@ -28,7 +28,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     password: 'P02tGr32@*',
     database: 'MercadoExpressDB',
     autoLoadEntities: true,
-    synchronize: true,
+    synchronize: false,
   }),CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule],
   controllers: [AppController],
   providers: [AppService],
