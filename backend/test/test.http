@@ -1,0 +1,30 @@
+GET http://localhost:3003/city
+
+###
+ 
+GET http://localhost:3003/city/state/SP
+
+###
+
+GET http://localhost:3003/state
+
+###
+
+GET http://localhost:3003/state/SP
+
+###
+
+POST http://localhost:3003/customer
+Content-Type: application/json
+
+{
+    "name": "Casa dos Silva 3",
+    "dateBirth": "2000-02-10",
+    "phone": "18998104134",
+    "username": "teste",
+    "email": "teste@teste3.com",
+    "password": "testee",
+    "confirmPassword": "testee",
+    "alternativeContact": "18999100041",
+    "notification": true
+}
