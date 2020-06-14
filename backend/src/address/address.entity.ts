@@ -18,7 +18,7 @@ export class Address {
     // tslint:disable-next-line:variable-name
     number: number;
 
-    @Column({length: 8})
+    @Column()
     cep: string;
 
     @Column({length: 12, nullable: true})

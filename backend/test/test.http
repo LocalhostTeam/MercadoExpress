@@ -15,6 +15,10 @@ GET http://localhost:3003/state/SP
 ###
 
 POST http://localhost:3003/customer
+
+###
+
+POST http://localhost:3003/address
 Content-Type: application/json
 
 {

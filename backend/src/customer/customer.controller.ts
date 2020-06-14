@@ -2,7 +2,6 @@ import { Controller, Get, Param, Post, Body, Put } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { Customer } from './customer.entity';
 import { CustomerDto } from './customer.dto';
-import { Flunt } from 'src/utils/flunt';
 
 @Controller('customer')
 export class CustomerController {
