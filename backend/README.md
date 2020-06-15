@@ -96,3 +96,5 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+await queryRunner.query(`ALTER TABLE "product_brand" ADD CONSTRAINT "FK_ad86ddf61021f22143a805b62a3" UNIQUE ("brandId", "productId")`, undefined);
