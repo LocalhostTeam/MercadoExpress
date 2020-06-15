@@ -1,12 +1,22 @@
-
-import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
-import { ProductBrandDto} from './interfaces/product-brand.dto';
+import {
+    Controller,
+    Get,
+    Post,
+    Body,
+    Param,
+    Delete,
+    Put,
+} from '@nestjs/common';
+import { ProductBrandDto } from './interfaces/product-brand.dto';
+import { ProductBrandService } from './product-brand.service';
 
 @Controller('product-brand')
 export class ProductBrandController {
-    @Get()
-    getProductBrand() {
-        return 'Aqui estão todos os produtos desta marca';
+    constructor(private readonly productBrandService: ProductBrandService) {}
+
+    @Get(':id')
+    getProductBrand(@Param('id') id: number) {
+        return this.productBrandService.getProductBrand(id);
     }
 
     @Post()
@@ -20,7 +30,7 @@ export class ProductBrandController {
     }
 
     @Put(':id')
-    update(@Param ('id') id: number) {
+    update(@Param('id') id: number) {
         return `Atualização realizada com sucesso ${id}`;
     }
 

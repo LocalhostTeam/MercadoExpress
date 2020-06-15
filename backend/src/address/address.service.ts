@@ -20,11 +20,15 @@ export class AddressService {
         return await this.repository.findOne({ id: id });
     }
 
-    async findByIdCustomer(customerId: number): Promise<Address[]> {
-        return await this.repository.find({ where:{ customerId: customerId }, relations: ['customer'] });
+    async findByCustomer(customerId: number): Promise<Address[]> {
+        return await this.repository.find({ where:{ customerId: customerId } });
     }
 
     async create(address: Address) {
+        await this.repository.save(address);
+    }
+
+    async save(address: Address) {
         await this.repository.save(address);
     }
 

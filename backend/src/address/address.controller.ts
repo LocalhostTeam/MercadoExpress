@@ -9,22 +9,22 @@ export class AddressController {
         private readonly addressService: AddressService,
     ) { }
 
-    // No retorno a função faz join entre as tables e retorna todos os dados do customer
     @Get (':id')
-    async findByIdCustomer(@Param('id') id: number) {
-        return this.addressService.findByIdCustomer(id);
+    async findById(@Param('id') id: number) {
+        return this.addressService.findById(id);
     }
 
-    // Ajeitar rota para ficar /'user'/show/'addressId'
-    @Get (':customerId/show/:id')
-    async findById(@Param('id') id: number) {
-        return await this.addressService.findById(id);
+    @Get ('customer/:id')
+    async findByCustomer(@Param('id') id: number) {
+        return await this.addressService.findByCustomer(id);
     }
 
     @Post()
     async create(@Body() addressDto: AddressDto) {
         const address = new Address();
 
+        address.customerId = addressDto.customerId;
+        address.marketId = addressDto.marketId;
         address.cep = addressDto.cep;
         address.cityId = addressDto.cityId;
         address.district = addressDto.district;
@@ -35,9 +35,8 @@ export class AddressController {
         return await this.addressService.create(address);
     }
 
-    // Arrumar varchar do CEP
     @Put(':id')
-    async update (@Param('id') id: number, @Body('address') addressDto: AddressDto) {
+    async update (@Param('id') id: number, @Body() addressDto: AddressDto) {
         const address = new Address();
 
         address.cep = addressDto.cep;
@@ -46,6 +45,8 @@ export class AddressController {
         address.street = addressDto.street;
         address.number = addressDto.number;
         address.obs = addressDto.obs;
+        address.customerId = addressDto.customerId;
+        address.marketId = addressDto.marketId;
 
         return await this.addressService.update(id, address);
     }
