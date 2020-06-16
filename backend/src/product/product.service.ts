@@ -7,8 +7,6 @@ import { Brand } from 'src/brand/brand.entity';
 
 @Injectable()
 export class ProductService {
-    service: any;
-    sevice: any;
     constructor(
         @InjectRepository(Product)
         private readonly repository: Repository<Product>,
@@ -18,19 +16,19 @@ export class ProductService {
         return await this.repository.find();
     }
 
-    async get(): Promise<ProductBrand[]> {
-        return await this.service.find({ relations: ['product']})
+    async findById(id: number): Promise<Product> {
+        return await this.repository.findOne({ id: id });
     }
 
-    async find(): Promise<Brand[]> {
-        return await this.sevice.find({ relations: ['product']})
-    }
+    // async find(): Promise<Brand[]> {
+    //     return await this.repository.find({ relations: ['product']})
+    // }
 
     async create(product: Product) {
         await this.repository.save(product);
     }
 
-    async update(id: number, product:Product) {
+    async update(id: number, product: Product) {
         await this.repository.update(id, product);
     }
 

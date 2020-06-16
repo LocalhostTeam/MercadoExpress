@@ -1,30 +1,41 @@
-import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
-import { BrandDto } from './interfaces/brand.dto';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  Delete,
+  Put,
+} from '@nestjs/common';
+import { BrandService } from './brand.service';
+import { Brand } from './brand.entity';
 
 @Controller('brand')
 export class BrandController {
-    @Get()
-    getBrand() {
-        return 'Aqui estão todas as marcas';
-    }
+  constructor(private readonly brandService: BrandService) {}
 
-    @Post()
-    create(@Body() brandDto: BrandDto) {
-        return brandDto;
-    }
+  @Get()
+  async getAll() {
+    return await this.brandService.findAll();
+  }
 
-    @Get(':id')
-    findOne(@Param('id') id:number) {
-        return `A marca id ${id}`;
-    }
+  @Get(':id')
+  async getById(@Param('id') id: number) {
+    return await this.brandService.findById(id);
+  }
 
-    @Put(':id')
-    update(@Param('id') id: number) {
-        return `Atulização do id da marca realizada com sucesso ${id}`;
-    }
+  @Post()
+  async create(@Body() brand: Brand) {
+    return await this.brandService.create(brand);
+  }
 
-    @Delete(':id')
-    remove(@Param('id') id:number) {
-        return `Marca id removida com sucesso ${id}`;
-    }
+  @Put(':id')
+  async update(@Param('id') id: number, @Body() brand: Brand) {
+    return await this.brandService.update(id, brand);
+  }
+
+  @Delete(':id')
+  async remove(@Param('id') id: number) {
+    return await this.brandService.delete(id);
+  }
 }

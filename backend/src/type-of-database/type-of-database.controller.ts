@@ -1,31 +1,55 @@
-
-import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  Delete,
+  Put,
+} from '@nestjs/common';
 import { TypeOfDatabaseDto } from './interfaces/type-of-database.dto';
+import { TypeOfDatabaseService } from './type-of-database.service';
+import { TypeOfDatabase } from './type-of-database.entity';
 
 @Controller('type-of-database')
 export class TypeOfDatabaseController {
-    @Get()
-    getTypeOfDatabase() {
-        return 'Aqui estão todos os tipos de base de dados';
-    }
+  constructor(private readonly typeOfDataBaseService: TypeOfDatabaseService) {}
 
-    @Post()
-    create(@Body() typeOfDatabaseDto: TypeOfDatabaseDto) {
-        return typeOfDatabaseDto;
-    }
+  @Get()
+  async getAll() {
+    return await this.typeOfDataBaseService.findAll();
+  }
 
-    @Get(':id')
-    findOne(@Param(':id') id: number) {
-        return `O id da base de dados solicitado ${id}`;
-    }
+  @Get(':id')
+  async getById(@Param('id') id: number) {
+    return await this.typeOfDataBaseService.findById(id);
+  }
 
-    @Put(':id')
-    update(@Param ('id') id: number) {
-        return `Atualização realizada com sucesso ${id}`;
-    }
+  @Post()
+  async create(@Body() typeOfDatabaseDto: TypeOfDatabaseDto) {
+    const typeOfDataBase = new TypeOfDatabase();
 
-    @Delete(':id')
-    remove(@Param('id') id: number) {
-        return `Tipo de base de dados deletado com sucesso ${id}`;
-    }
+    typeOfDataBase.type = typeOfDatabaseDto.type;
+    typeOfDataBase.plugin = typeOfDatabaseDto.plugin;
+
+    return await this.typeOfDataBaseService.create(typeOfDataBase);
+  }
+
+  @Put(':id')
+  async update(
+    @Param('id') id: number,
+    @Body() typeOfDatabaseDto: TypeOfDatabaseDto,
+  ) {
+    const typeOfDataBase = new TypeOfDatabaseDto();
+
+    typeOfDataBase.type = typeOfDatabaseDto.type;
+    typeOfDataBase.plugin = typeOfDatabaseDto.plugin;
+
+    return await this.typeOfDataBaseService.update(id, typeOfDatabaseDto);
+  }
+
+  //   @Delete(':id')
+  //   async remove(@Param('id') id: number) {
+  //     return await this.typeOfDataBaseService.delete(id);
+  //   }
 }
