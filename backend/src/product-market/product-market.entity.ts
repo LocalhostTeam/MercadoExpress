@@ -4,35 +4,29 @@ import { ProductBrand } from "src/product-brand/product-brand.entity";
 
 @Entity()
 export class ProductMarket {
-    @PrimaryColumn("integer")
-    brandId: number;
-
-    @PrimaryColumn("integer")
-    productId: number;
+    @PrimaryColumn('integer')
+    productBrandId: number;
 
     @ManyToOne(() => ProductBrand)
-    @JoinColumn([
-        { name: "brandId", referencedColumnName: "brandId" },
-        { name: "productId", referencedColumnName: "productId" }
-    ])
+    @JoinColumn({ name: 'productBrandId' })
     public productBrand!: ProductBrand;
 
-    @PrimaryColumn("integer")
+    @PrimaryColumn('integer')
     marketId: number;
     
     @ManyToOne(() => Market, market => market.id)
     @JoinColumn({ name: 'marketId' })
     public market!: Market;
 
-    @PrimaryColumn()
+    @Column({ nullable: false })
     codProductInMarket: number;
 
-    @Column("real")
+    @Column({ type: 'real', nullable: false })
     price: number;
 
-    @Column("real")
+    @Column({ type: 'real', nullable: false })
     discount: number;
 
-    @Column()
+    @Column({ nullable: false })
     quantity: number;
 }

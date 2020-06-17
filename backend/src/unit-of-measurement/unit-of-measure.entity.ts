@@ -1,13 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-export class TypeOfDatabase {
+export class UnitOfMeasure {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 30, nullable: false })
+    @Column({ length:24, unique: true, nullable: false })
     name: string;
-
-    @Column({length: 30})
-    plugin: string;
 }

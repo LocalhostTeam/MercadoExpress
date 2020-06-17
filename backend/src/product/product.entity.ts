@@ -7,13 +7,10 @@ export class Product {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({length: 255})
-    fullName: string;
+    @Column({ length: 100, nullable: false, unique: true})
+    name: string;
 
-    @Column({length: 50})
-    shortName: string;
-
-    @Column()
+    @Column({ nullable: false})
     categoryProductId: number;
 
     @ManyToOne(type => CategoryProduct)

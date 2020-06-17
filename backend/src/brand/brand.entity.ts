@@ -6,7 +6,7 @@ export class Brand {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({length: 50})
+    @Column({ length: 50, nullable: false })
     name: string;
 
     @OneToMany(type => ProductBrand, productBrand => productBrand.brand)

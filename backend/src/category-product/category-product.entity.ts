@@ -5,7 +5,7 @@ export class CategoryProduct {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 50 })
+    @Column({ length: 50, nullable: false })
     name: string;
 
     @Column({ length: 255, nullable: true })

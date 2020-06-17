@@ -17,6 +17,8 @@ import { CityModule } from './city/city.module';
 import { TypeScheduleModule } from './type-schedule/type-schedule.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UnitOfMeasurementModule } from './unit-of-measurement/unit-of-measurement.module';
+import { PackModule } from './pack/pack.module';
 
 @Module({
   imports: [
@@ -29,7 +31,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     database: 'MercadoExpressDB',
     autoLoadEntities: true,
     synchronize: false,
-  }),CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule],
+  }),
+  CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule, UnitOfMeasurementModule, PackModule],
   controllers: [AppController],
   providers: [AppService],
 })

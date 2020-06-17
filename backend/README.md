@@ -1,3 +1,6 @@
+<h2>Link do diagrama do banco</h2>
+<p>https://dbdiagram.io/d/5ee7eaba9ea313663b3a97ff</p>
+
 <h2 align="center">
   How to - para executar o backend da aplicação
 </h2>

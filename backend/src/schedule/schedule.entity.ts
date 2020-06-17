@@ -6,13 +6,13 @@ export class Schedule {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column("timetz")
+    @Column({ type: 'timetz', nullable: false })
     openingTime: Date;
 
-    @Column("timetz")
+    @Column({ type: 'timetz', nullable: false })
     closingTime: Date;
 
-    @Column()
+    @Column({ nullable: false })
     typeScheduleId: number;
 
     @ManyToOne(type => TypeSchedule)
