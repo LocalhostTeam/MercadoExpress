@@ -2,6 +2,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Brand } from './brand.entity';
+import { ProductBrand } from 'src/product-brand/product-brand.entity';
 
 @Injectable()
 export class BrandService {
@@ -16,6 +17,13 @@ export class BrandService {
 
   async findById(id: number): Promise<Brand> {
     return await this.repository.findOne({ id: id });
+  }
+
+  async findByIdProducts(id: number): Promise<Brand[]> {
+    return await this.repository.find({
+      where: { id: id },
+      relations: ['productBrands'],
+    });
   }
 
   async create(brand: Brand) {

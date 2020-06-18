@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { BrandService } from './brand.service';
 import { Brand } from './brand.entity';
+import { ProductBrand } from 'src/product-brand/product-brand.entity';
 
 @Controller('brand')
 export class BrandController {
@@ -22,6 +23,11 @@ export class BrandController {
   @Get(':id')
   async getById(@Param('id') id: number) {
     return await this.brandService.findById(id);
+  }
+
+  @Get('list/:id')
+  async getByIdProducts(@Param('id') id: number) {
+    return await this.brandService.findByIdProducts(id);
   }
 
   @Post()

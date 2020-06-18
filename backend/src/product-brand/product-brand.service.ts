@@ -1,9 +1,13 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
-import { Repository } from 'typeorm';
+import {
+  Repository,
+  getRepository,
+  getConnection,
+  createQueryBuilder,
+} from 'typeorm';
 import { ProductBrand } from './product-brand.entity';
-import { Product } from 'src/product/product.entity';
-import { Brand } from 'src/brand/brand.entity';
+import { createConnection } from 'net';
 
 @Injectable()
 export class ProductBrandService {
@@ -13,22 +17,15 @@ export class ProductBrandService {
   ) {}
 
   async findAll(): Promise<ProductBrand[]> {
-    return await this.repository.find();
+    return await this.repository.find({ relations: ['brand'] });
   }
 
-  async getById(brandId: number): Promise<ProductBrand[]> {
+  async findById(id: number): Promise<ProductBrand[]> {
     return await this.repository.find({
-      where: { brandId: brandId },
+      where: { id: id },
+      relations: ['pack', 'brand', 'product', 'unitOfMeasure'],
     });
   }
-
-  async findById(id: number): Promise<ProductBrand> {
-    return await this.repository.findOne(id);
-  }
-
-  // async find(): Promise<Brand[]> {
-  //     return await this.repository.find({ relations: ['productBrand'] });
-  // }
 
   async create(productBrand: ProductBrand) {
     await this.repository.save(productBrand);

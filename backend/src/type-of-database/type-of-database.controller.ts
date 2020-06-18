@@ -29,7 +29,7 @@ export class TypeOfDatabaseController {
   async create(@Body() typeOfDatabaseDto: TypeOfDatabaseDto) {
     const typeOfDataBase = new TypeOfDatabase();
 
-    typeOfDataBase.type = typeOfDatabaseDto.type;
+    typeOfDataBase.name = typeOfDatabaseDto.name;
     typeOfDataBase.plugin = typeOfDatabaseDto.plugin;
 
     return await this.typeOfDataBaseService.create(typeOfDataBase);
@@ -40,12 +40,12 @@ export class TypeOfDatabaseController {
     @Param('id') id: number,
     @Body() typeOfDatabaseDto: TypeOfDatabaseDto,
   ) {
-    const typeOfDataBase = new TypeOfDatabaseDto();
+    const typeOfDataBase = new TypeOfDatabase();
 
-    typeOfDataBase.type = typeOfDatabaseDto.type;
+    typeOfDataBase.name = typeOfDatabaseDto.name;
     typeOfDataBase.plugin = typeOfDatabaseDto.plugin;
 
-    return await this.typeOfDataBaseService.update(id, typeOfDatabaseDto);
+    return await this.typeOfDataBaseService.update(id, typeOfDataBase);
   }
 
   //   @Delete(':id')

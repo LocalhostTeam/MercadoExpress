@@ -1,5 +1,5 @@
 export class TypeOfDatabaseDto {
-    public id: number;
-    public type: string;
-    public plugin: string;
+  public id: number;
+  public name: string;
+  public plugin: string;
 }
