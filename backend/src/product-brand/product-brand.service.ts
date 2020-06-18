@@ -1,13 +1,7 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
-import {
-  Repository,
-  getRepository,
-  getConnection,
-  createQueryBuilder,
-} from 'typeorm';
+import { Repository, getConnection, getRepository } from 'typeorm';
 import { ProductBrand } from './product-brand.entity';
-import { createConnection } from 'net';
 
 @Injectable()
 export class ProductBrandService {
@@ -16,15 +10,28 @@ export class ProductBrandService {
     private readonly repository: Repository<ProductBrand>,
   ) {}
 
-  async findAll(): Promise<ProductBrand[]> {
-    return await this.repository.find({ relations: ['brand'] });
+  async findAll() {
+    const teste = await getRepository(ProductBrand)
+      .createQueryBuilder('productBrand')
+      .leftJoinAndSelect('productBrand.pack', 'pack')
+      .select('pack.name, productBrand.shortName, productBrand.description')
+      .getRawMany();
+
+    return teste;
   }
 
-  async findById(id: number): Promise<ProductBrand[]> {
-    return await this.repository.find({
-      where: { id: id },
-      relations: ['pack', 'brand', 'product', 'unitOfMeasure'],
-    });
+  async findById(id: number) {
+    const teste = await getRepository(ProductBrand)
+      .createQueryBuilder('productBrand')
+      .where('productBrand.id = :id', { id: id })
+      .leftJoinAndSelect('productBrand.pack', 'pack')
+      .leftJoinAndSelect('productBrand.brand', 'brand')
+      .select(
+        'productBrand.shortName, productBrand.description, brand.name as brand, pack.name as pack, productBrand.amount',
+      )
+      .getRawMany();
+
+    return teste;
   }
 
   async create(productBrand: ProductBrand) {

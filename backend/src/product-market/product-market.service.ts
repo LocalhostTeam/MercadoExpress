@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProductMarket } from './product-market.entity';
-import { Repository } from 'typeorm';
+import { Repository, getRepository } from 'typeorm';
 
 @Injectable()
 export class ProductMarketService {
@@ -11,14 +11,33 @@ export class ProductMarketService {
   ) {}
 
   async findAll(): Promise<ProductMarket[]> {
-    return await this.repository.find();
+    const all = await getRepository(ProductMarket)
+      .createQueryBuilder('productMarket')
+      .leftJoinAndSelect('productMarket.productBrand', 'productBrand')
+      .leftJoinAndSelect('productBrand.pack', 'pack')
+      .leftJoinAndSelect('productBrand.brand', 'brand')
+      .leftJoinAndSelect('productBrand.unitOfMeasure', 'unit')
+      .leftJoinAndSelect('productBrand.product', 'product')
+      .leftJoinAndSelect('product.categoryProduct', 'category')
+      .getMany();
+
+    return all;
   }
 
-  async findById(id: number): Promise<ProductMarket[]> {
-    return await this.repository.find({
-      where: { marketId: id },
-      relations: ['productBrand'],
-    });
+  async findById(id: number) {
+    const single = await getRepository(ProductMarket)
+      .createQueryBuilder('productMarket')
+      .where('productBrand.id = :id', { id: id })
+      .leftJoinAndSelect('productMarket.productBrand', 'productBrand')
+      .leftJoinAndSelect('productBrand.pack', 'pack')
+      .leftJoinAndSelect('productBrand.brand', 'brand')
+      .leftJoinAndSelect('productBrand.unitOfMeasure', 'unit')
+      .leftJoinAndSelect('productBrand.product', 'product')
+      .leftJoinAndSelect('product.categoryProduct', 'category')
+      .select()
+      .getMany();
+
+    return single;
   }
 
   async create(productMarket: ProductMarket) {
