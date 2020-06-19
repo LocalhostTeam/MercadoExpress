@@ -10,7 +10,7 @@ export class ProductMarketService {
     private readonly repository: Repository<ProductMarket>,
   ) {}
 
-  async findAll(): Promise<ProductMarket[]> {
+  async findAll() {
     const all = await getRepository(ProductMarket)
       .createQueryBuilder('productMarket')
       .leftJoinAndSelect('productMarket.productBrand', 'productBrand')

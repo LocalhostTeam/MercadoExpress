@@ -20,8 +20,8 @@ export class ProductMarketController {
   }
 
   @Get(':id')
-  getById(@Param('id') id: number) {
-    return this.productMarketService.findById(id);
+  async getById(@Param('id') id: number) {
+    return await this.productMarketService.findById(id);
   }
 
   @Post()

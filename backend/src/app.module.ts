@@ -19,6 +19,7 @@ import { ScheduleModule } from './schedule/schedule.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UnitOfMeasurementModule } from './unit-of-measurement/unit-of-measurement.module';
 import { PackModule } from './pack/pack.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -48,6 +49,7 @@ import { PackModule } from './pack/pack.module';
     ScheduleModule,
     UnitOfMeasurementModule,
     PackModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

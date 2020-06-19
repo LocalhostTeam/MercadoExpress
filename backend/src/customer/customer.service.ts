@@ -5,29 +5,33 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class CustomerService {
-    constructor(
-        @InjectRepository(Customer)
-        private repository: Repository<Customer>
-    ) { }
+  constructor(
+    @InjectRepository(Customer)
+    private repository: Repository<Customer>,
+  ) {}
 
-    async findAll(): Promise<Customer[]> {
-        return await this.repository.find();
-    }
+  async findAll(): Promise<Customer[]> {
+    return await this.repository.find();
+  }
 
-    async findById(id: number): Promise<Customer> {
-        return await this.repository.findOne({ id: id});
-    }
-    
-    async create(customer: Customer) {
-        console.log(Customer);
-        await this.repository.save(customer);
-    }
+  async findByUser(username: string) {
+    return await this.repository.findOne({ username: username });
+  }
 
-    async update(id: number, customer: Customer) {
-        await this.repository.update(id, customer);
-    }
+  async findById(id: number): Promise<Customer> {
+    return await this.repository.findOne({ id: id });
+  }
 
-    async delete(id: number) {
-        await this.repository.delete(id);
-    }
+  async create(customer: Customer) {
+    console.log(Customer);
+    await this.repository.save(customer);
+  }
+
+  async update(id: number, customer: Customer) {
+    await this.repository.update(id, customer);
+  }
+
+  async delete(id: number) {
+    await this.repository.delete(id);
+  }
 }
