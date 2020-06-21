@@ -14,9 +14,19 @@ import { ProductMarket } from './product-market.entity';
 export class ProductMarketController {
   constructor(private readonly productMarketService: ProductMarketService) {}
 
-  @Get()
-  async getAll() {
-    return await this.productMarketService.findAll();
+  @Get('market/:id')
+  async getProductsByMarket(@Param('id') id: number) {
+    return await this.productMarketService.findByMarket(id);
+  }
+
+  @Get('category-product/:id/:categoryId')
+  async getProductsByCategory(
+    @Param('id')
+    id: number,
+    @Param('categoryId')
+    categoryId: number,
+  ) {
+    return await this.productMarketService.findByCategory(id, categoryId);
   }
 
   @Get(':id')

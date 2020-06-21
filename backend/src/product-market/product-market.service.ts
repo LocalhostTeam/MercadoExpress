@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProductMarket } from './product-market.entity';
-import { Repository, getRepository } from 'typeorm';
+import { Repository, getRepository, getConnection, getManager } from 'typeorm';
+import { CategoryProduct } from 'src/category-product/category-product.entity';
 
 @Injectable()
 export class ProductMarketService {
@@ -10,15 +11,32 @@ export class ProductMarketService {
     private readonly repository: Repository<ProductMarket>,
   ) {}
 
-  async findAll() {
+  async findByMarket(id: number) {
     const all = await getRepository(ProductMarket)
       .createQueryBuilder('productMarket')
+      .where('productMarket.marketId = :id', { id: id })
       .leftJoinAndSelect('productMarket.productBrand', 'productBrand')
       .leftJoinAndSelect('productBrand.pack', 'pack')
       .leftJoinAndSelect('productBrand.brand', 'brand')
       .leftJoinAndSelect('productBrand.unitOfMeasure', 'unit')
       .leftJoinAndSelect('productBrand.product', 'product')
       .leftJoinAndSelect('product.categoryProduct', 'category')
+      .getMany();
+
+    return all;
+  }
+
+  async findByCategory(id: number, categoryId: number) {
+    const all = await getManager()
+      .createQueryBuilder(ProductMarket, 'productMarket')
+      .leftJoinAndSelect('productMarket.productBrand', 'productBrand')
+      .leftJoinAndSelect('productBrand.pack', 'pack')
+      .leftJoinAndSelect('productBrand.brand', 'brand')
+      .leftJoinAndSelect('productBrand.unitOfMeasure', 'unit')
+      .leftJoinAndSelect('productBrand.product', 'product')
+      .leftJoinAndSelect('product.categoryProduct', 'category')
+      .where('productMarket.marketId = :id', { id: id })
+      .andWhere('category.id = :categoryId', { categoryId: categoryId })
       .getMany();
 
     return all;
@@ -35,7 +53,7 @@ export class ProductMarketService {
       .leftJoinAndSelect('productBrand.product', 'product')
       .leftJoinAndSelect('product.categoryProduct', 'category')
       .select()
-      .getMany();
+      .getOne();
 
     return single;
   }

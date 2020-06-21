@@ -14,7 +14,9 @@ export class ProductBrandService {
     const teste = await getRepository(ProductBrand)
       .createQueryBuilder('productBrand')
       .leftJoinAndSelect('productBrand.pack', 'pack')
-      .select('pack.name, productBrand.shortName, productBrand.description')
+      .select(
+        'pack.name, productBrand.shortName, productBrand.description, productBrand.id',
+      )
       .getRawMany();
 
     return teste;
