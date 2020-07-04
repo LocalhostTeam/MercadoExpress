@@ -19,20 +19,22 @@ import { ScheduleModule } from './schedule/schedule.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UnitOfMeasurementModule } from './unit-of-measurement/unit-of-measurement.module';
 import { PackModule } from './pack/pack.module';
+import { SellModule } from './sell/sell.module';
+import { SaleProductsModule } from './sale-products/sale-products.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-    type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'postgres',
-    password: 'P02tGr32@*',
-    database: 'MercadoExpressDB',
-    autoLoadEntities: true,
-    synchronize: false,
-  }),
-  CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule, UnitOfMeasurementModule, PackModule],
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'P02tGr32@*',
+      database: 'MercadoExpressDB',
+      autoLoadEntities: true,
+      synchronize: true,
+    }),
+    CustomerModule, MarketModule, AddressModule, ProductModule, CategoryProductModule, ProductMarketModule, MeanOfPaymentModule, TypeOfDatabaseModule, ProductBrandModule, BrandModule, StateModule, CityModule, TypeScheduleModule, ScheduleModule, UnitOfMeasurementModule, PackModule, SellModule, SaleProductsModule],
   controllers: [AppController],
   providers: [AppService],
 })

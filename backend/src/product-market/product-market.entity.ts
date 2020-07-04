@@ -1,6 +1,7 @@
-import { Entity, PrimaryColumn, ManyToOne, Column, JoinColumn } from "typeorm";
+import { Entity, PrimaryColumn, ManyToOne, Column, JoinColumn, OneToMany } from "typeorm";
 import { Market } from "src/market/market.entity";
 import { ProductBrand } from "src/product-brand/product-brand.entity";
+import { SaleProducts } from "src/sale-products/sale-products.entity";
 
 @Entity()
 export class ProductMarket {
@@ -29,4 +30,7 @@ export class ProductMarket {
 
     @Column({ nullable: false })
     quantity: number;
+
+    @OneToMany(type => SaleProducts, saleProducts => saleProducts.productMarketId)
+    public saleProducts!: SaleProducts[];
 }

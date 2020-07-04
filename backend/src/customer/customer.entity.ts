@@ -12,6 +12,9 @@ export class Customer {
     @Column({ length: 30, nullable: true })
     username: string;
 
+    @Column({ length: 11, nullable: false })
+    cpf: string;
+
     @Column({ length: 255, nullable: true })
     profileImage: string;
     
